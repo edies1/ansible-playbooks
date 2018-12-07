@@ -1,0 +1,7 @@
+---
+- name: Ensure apache is installed and started via role
+  hosts: web
+  become: yes
+  roles:
+    - mysql
+ 

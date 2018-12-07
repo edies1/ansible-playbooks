@@ -1,0 +1,5 @@
+---
+# vars file for apache
+sql_itens:
+  - python-mysqldb
+  - mysql-server

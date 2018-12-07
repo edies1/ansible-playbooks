@@ -1,0 +1,7 @@
+---
+# defaults file for apache
+apache_test_message: This is a test message
+apache_webserver_port: 80
+httpd_packages:
+  - tree 
+  - tcpdump

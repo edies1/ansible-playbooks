@@ -1,0 +1,12 @@
+---
+# tasks file for apache
+- name: Install Mysql
+  yum:
+    name: "{{ item }}"
+  with_items: "{{ sql_itens }}"
+  
+- name: Ensure mysql service is started and enabled
+  service:
+    name: mysql
+    state: started
+    enabled: yes
