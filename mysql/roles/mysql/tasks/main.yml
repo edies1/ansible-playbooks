@@ -1,5 +1,9 @@
 ---
 # tasks file for apache
+- name: Install epel
+  yum:
+    name: epel-release
+    
 - name: Install Mysql
   yum:
     name: "{{ item }}"
