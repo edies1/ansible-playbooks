@@ -1,86 +1,48 @@
-# Ansible Lightbulb
+# Ansible Lightbulb Examples
 
-The Ansible Lightbulb project is an effort to provide a content toolkit and educational reference for effectively communicating and teaching Ansible topics.
-
-Lightbulb began life as the content that supported Ansible's training program before it joined the Red Hat family focused solely on Linux server automation.
-
-This content is now taking on a new life as a multi-purpose toolkit for effectively demonstrating Ansible's capabilities or providing informal workshop training in various forms -- instructor-led, hands-on or self-paced.
-
-Over time Lightbulb will be expanded to include advanced and developer topics in addition to expanding beyond linux server automation and into Windows and network automation.
-
-To support these objectives, the project provides a lab provisioner tool for creating an environment to present and work with Lightbulb content.
-
-## What's Provided
-
-The Ansible Lightbulb project has been designed to be used as a toolkit and best practices reference for Ansible presentations ranging from demos thru self-paced learning thru hands-on workshops. Here you will find:
-
-* Examples
-* Workshops
-* Presentation Decks
-* Guides
-* Lab Provisioner
-* Facilitator Documentation
-
-### Examples
-
-The content in `examples/` is the heart of what Lightbulb has to offer. They are complete Ansible playbooks that demonstrate the most fundamental features and most common use patterns.
+This content is a collection of complete Ansible solutions that demonstrate the most essential features and common use patterns.
 
 These examples are an excellent educational reference for communicating how Ansible works in a clear, focused and consistent manner using recommended best practices.
 
-This content is a great source for canned demos or something you can walk-thru to illustrate automating with Ansible to a group. Some of the examples  serve as the solutions to the workshops.
+It is a great source for canned demos or something you can walk-thru to illustrate automating with Ansible to a group. Some of the examples also serve as the solutions to the workshop assignments.
 
-### Workshops
+## Documentation of examples
 
-The content of `workshops/` are a collection of Markdown documents and applicable resources for providing hands-on assignments for learning how to automate with Ansible. The workshops are set up as exercises to be done by the participants, and are most suitable for smaller audiences.
+The documentation of the examples must follow the example structure - or a subset of it - shown below:
 
-Instructor notes on the execution and solution to all workshops can be found in `facilitator/solutions/`.
+```
+# cloud-aws
 
-### Presentation Decks
-
-The content of `decks/` are collection of presentation decks using the [reveal.js framework](http://lab.hakim.se/reveal-js/) for delivering instructor-led or hands-on instruction.
-
-### Guides
-
-The `guides/` provide closely guided exercises with a lower barrier to entry. These are suitable for beginners or larger audiences. People can follow the guides on their own pace, and usually need very limited support is required during the execution of such labs.
-
-### Lab Provisioner
-
-Lightbulb provides a lab provisioner utility for creating a personal lab environment for each student. Currently only Amazon Web Services (AWS) is supported in us-east-1 and us-west-1 with the foundation to support other regions in place.
-
-The provisioner and the documentation how to use it can be found in `tools/aws_lab_setup/`.
-
-**Coming Soon.** Vagrant support for self-paced learning is planned. Legacy support from the previous generation of Lightbulb remains, but is in need of an overhaul.
-
-### Facilitator Documentation
-
-`facilitator/` includes documentation on recommended ways Lightbulb content can be assembled and used for a wide range of purposes and scenarios.
-
-If you are planning on using Lightbulb for some sort of informal training on automating with Ansible [this documentation](facilitator/README.md) should be your next stop.
+A basic description explaining the reasoning behind the example as well as what best practices and techniques are shown by it.
 
 ## Requirements
 
-True to its philosophy and The Ansible Way, Lightbulb has been developed so that using Lightbulb is as simple and low-overhead as possible. Requirements depend on the format and delivery of the Lightbulb content.
+Any fundamental requirements like an AWS account or the need for Cisco IOS devices are mentioned here.
 
-* Modern HTML5 Standard Compliant Web Browser
-* A recent stable version of Python 2.7 and the latest stable version of the boto libraries.
-* The latest stable versions of Ansible.
-* A SSH client such as PuTTY or Mac OSX Terminal.
-* An AWS account or local Vagrant setup.
+## Variables
 
-## Assumed Knowledge
+Identify all variables used in the playbook here.
 
-For hands-on or self-paced training, students should have working knowledge of using SSH and command line shell (BASH). The ability to SSH from their personal laptop to a lab environment hosted in a public cloud can also be required based on the format and presentation of the context.
+### Required
 
-For demos and instructor-led exercises, conceptual understanding of linux system admin, DevOps and distributed application architecture is all that is required.
+This optional paragraph highlights required variables that need to be provided.
 
-## Reference
+### Optional
 
-* [Ansible Documentation](http://docs.ansible.com)
-* [Ansible Best Practices: The Essentials](https://www.ansible.com/blog/ansible-best-practices-essentials)
+This optional paragraph highlights optional variables that might be provided to further alter the execution of the example.
 
-## License
+## Usage
 
-Red Hat, the Shadowman logo, Ansible, and Ansible Tower are trademarks or registered trademarks of Red Hat, Inc. or its subsidiaries in the United States and other countries.
+Necessary and notable commands to execute the example playbook are listed here.
 
-All other parts of Ansible Lightbulb are made available under the terms of the [MIT License](LICENSE).
-# ansible-playbooks
+### One More Thing
+
+Special tips and advanced tricks regarding the example can be put here.
+
+```
+
+A goog example of a sophisticated and complete `README.md` can be found in the [cloud-aws example](cloud-aws/README.md).
+
+## Naming of examples
+
+Examples should be named in a short and clear way focussing on the use case they cover.
