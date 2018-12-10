@@ -1,9 +1,9 @@
 ---
 # vars file for apache
 sql_itens:
-  - mysql-server-core-5.5
-  - mysql-client-core-5.5
-  - libmysqlclient-dev
+  # - mysql-server-core-5.5
+  # - mysql-client-core-5.5
+  # - libmysqlclient-dev
   - python-mysqldb
   - mysql-server
   - mysql-client
