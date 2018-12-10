@@ -12,11 +12,6 @@
 - name: Start the MySQL service
   action: service name=mysql state=started
 
-- name: Remove the test database
-  mariadb: 
-    name: test
-    state: absent
-
 - name: Create deploy user for mariadb
   mariadb_user: 
     user: "deploy" 
