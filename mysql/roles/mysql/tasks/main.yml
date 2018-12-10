@@ -4,16 +4,16 @@
   yum:
     name: epel-release
     
-- name: Install Mysql
+- name: Install Mariadb
   yum:
     name: "{{ item }}"
   with_items: "{{ sql_itens }}"
   
-- name: Start the MySQL service
-  action: service name=mysql state=started
+- name: Start the Mariadb service
+  action: service name=mariadb state=started
 
 - name: Create deploy user for mariadb
-  mariadb_user: 
+  mariadb_users: 
     user: "deploy" 
     host: "%" 
     password: "{{mysql_root_password}}" 
