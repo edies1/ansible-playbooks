@@ -13,19 +13,19 @@
   action: service name=mysql state=started
 
 - name: Remove the test database
-  mysql_db: 
+  mariadb: 
     name: test
     state: absent
 
-- name: Create deploy user for mysql
-  mysql_user: 
+- name: Create deploy user for mariadb
+  mariadb_user: 
     user: "deploy" 
     host: "%" 
     password: "{{mysql_root_password}}" 
     priv: "*.*:ALL,GRANT"
 
 - name: Ensure anonymous users are not in the database
-  mysql_user: 
+  mariadb_user: 
     user: '' 
     host: $item 
     state: absent
@@ -42,7 +42,7 @@
 #     mode: 0600    
 
 -  name: Update mysql root password for all root accounts
-   mysql_user: 
+   mariadb_user: 
      name: root 
      host: "{{item}}" 
      password: "{{mysql_root_password}}"
