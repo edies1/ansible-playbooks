@@ -1,5 +1,7 @@
 ---
 # tasks file for apache
+
+
 - name: Install epel
   yum:
     name: epel-release
@@ -10,7 +12,7 @@
   with_items: "{{ sql_itens }}"
   
 - name: Start the Mariadb service
-  action: service name=mariadb state=started
+  action: service name=mariadb.service state=started
 
 
  
