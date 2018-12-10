@@ -13,11 +13,16 @@
   action: service name=mariadb state=started
 
 - name: Create deploy user for mariadb
-  mariadb_users: 
-    user: "deploy" 
-    host: "%" 
-    password: "{{mysql_root_password}}" 
-    priv: "*.*:ALL,GRANT"
+ 
+  mariadb_users:
+  - name: john
+    password: letmein
+    priv: '*.*:ALL,GRANT'
+  - name: jack
+    password: sekrit
+    priv: 'jacksdb.*:ALL'
+    append_privs: 'yes'
+    host: '%'
 
 - name: Ensure anonymous users are not in the database
   mariadb_user: 
