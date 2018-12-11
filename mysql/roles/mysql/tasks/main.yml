@@ -14,17 +14,15 @@
 - name: Start the Mariadb service
   action: service name=mariadb.service state=started
 
-
- 
-#   mariadb_users:
-#   - name: john
-#     password: letmein
-#     priv: '*.*:ALL,GRANT'
-#   - name: jack
-#     password: sekrit
-#     priv: 'jacksdb.*:ALL'
-#     append_privs: 'yes'
-#     host: '%'
+  mariadb_users:
+  - name: john
+    password: letmein
+    priv: '*.*:ALL,GRANT'
+  - name: jack
+    password: sekrit
+    priv: 'jacksdb.*:ALL'
+    append_privs: 'yes'
+    host: '%'
 
 # - name: Ensure anonymous users are not in the database
 #   mariadb_user: 
