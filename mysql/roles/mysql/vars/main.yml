@@ -6,5 +6,6 @@ sql_itens:
   # - libmysqlclient-dev
   - python
   - mariadb-server
+  - MySQL-python
 
 mysql_root_password: testsql
