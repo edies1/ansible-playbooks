@@ -1,0 +1,10 @@
+---
+# tasks file for apache
+
+
+- name: teste file
+  win_lineinfile:
+    path: c:\Temp\teste.txt
+    regexp: '^name='
+    state: absent
+    

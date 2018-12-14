@@ -1,0 +1,11 @@
+---
+# vars file for apache
+sql_itens:
+  # - mysql-server-core-5.5
+  # - mysql-client-core-5.5
+  # - libmysqlclient-dev
+  - python
+  - mariadb-server
+  - MySQL-python
+
+mysql_root_password: testsql
