@@ -6,5 +6,5 @@
   win_lineinfile:
     path: c:\Temp\teste.txt
     regexp: '^name='
-    state: absent
+    line: 'name=JohnDoe'
     
